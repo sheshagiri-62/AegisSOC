@@ -1,0 +1,9 @@
+<decoder name="hft_network_decoder">
+  <program_name>hft-network</program_name>
+  <regex>from (\S+)</regex>
+  <order>srcip</order>
+</decoder>
+
+<decoder name="hft_app_decoder">
+  <program_name>hft-app</program_name>
+</decoder>
