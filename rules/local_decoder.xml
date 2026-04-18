@@ -1,9 +1,36 @@
+<!-- ================================================================
+     HFT SOC Lab — Custom Wazuh Decoders
+     Deploy to: /var/ossec/etc/decoders/local_decoder.xml
+     (inside Wazuh manager container)
+     ================================================================ -->
+
+<!-- ── Decoder 1: hft-network ──
+     Matches log lines from network.log shipped by Windows agent.
+     Log format:
+       Apr 17 09:00:00 hft-server hft-network[1234]: GET /api/orders HTTP/1.1 from 185.220.101.34
+     Extracts srcip from the IP after "from "
+-->
 <decoder name="hft_network_decoder">
   <program_name>hft-network</program_name>
   <regex>from (\S+)</regex>
   <order>srcip</order>
 </decoder>
 
+<!-- ── Decoder 2: hft-app (parent) ──
+     Matches CEF log lines from app.log shipped by Windows agent.
+     Log format:
+       Apr 17 09:00:00 hft-server hft-app[1234]: CEF:0|SOCLab|HFT-Platform|1.0|100|<EventName>|5|suser=<user> msg=<details>
+-->
 <decoder name="hft_app_decoder">
   <program_name>hft-app</program_name>
+</decoder>
+
+<!-- ── Decoder 2a: hft-app (child) — extracts suser and msg fields ──
+     Child decoder runs after parent matches.
+     Extracts the suser (actor) and msg (detail string) from CEF extension.
+-->
+<decoder name="hft_app_decoder">
+  <parent>hft_app_decoder</parent>
+  <regex>suser=(\S+) msg=(\.+)</regex>
+  <order>extra_data, extra_data2</order>
 </decoder>

@@ -21,62 +21,62 @@ const ts = (d) =>
 const I = {
   shield: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
     </svg>
   ),
   zap: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+      <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
     </svg>
   ),
   key: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4"/>
+      <path d="m21 2-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0 3 3L22 7l-3-3m-3.5 3.5L19 4" />
     </svg>
   ),
   activity: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+      <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
     </svg>
   ),
   wifi: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/>
+      <path d="M5 12.55a11 11 0 0 1 14.08 0" /><path d="M1.42 9a16 16 0 0 1 21.16 0" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" /><line x1="12" y1="20" x2="12.01" y2="20" />
     </svg>
   ),
   code: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
+      <polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" />
     </svg>
   ),
   clock: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+      <circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" />
     </svg>
   ),
   logout: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/>
+      <path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" />
     </svg>
   ),
   refresh: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="23 4 23 10 17 10"/><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+      <polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
     </svg>
   ),
   check: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="20 6 9 17 4 12"/>
+      <polyline points="20 6 9 17 4 12" />
     </svg>
   ),
   x: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+      <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
     </svg>
   ),
   inbox: (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+      <polyline points="22 12 16 12 14 15 10 15 8 12 2 12" /><path d="M5.45 5.11 2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" />
     </svg>
   ),
 };
@@ -128,8 +128,8 @@ function AuthPage({ onLogin }) {
           <h1>Simulate. <span>Detect.</span> Defend.</h1>
           <p>Generate realistic trading-platform activity and security events for Wazuh ingestion, parsing, and analyst drills.</p>
           <div className="feature-pills">
-            {[['Auth Logs','#14b8a6'],['Network Logs','#3b82f6'],['App Logs','#22c55e'],['Role Events','#f59e0b']].map(([l,c])=>(
-              <div className="pill" key={l}><span className="pill-dot" style={{background:c}}/>{l}</div>
+            {[['Auth Logs', '#14b8a6'], ['Network Logs', '#3b82f6'], ['App Logs', '#22c55e'], ['Role Events', '#f59e0b']].map(([l, c]) => (
+              <div className="pill" key={l}><span className="pill-dot" style={{ background: c }} />{l}</div>
             ))}
           </div>
         </section>
@@ -137,9 +137,9 @@ function AuthPage({ onLogin }) {
           <h2>Access</h2>
           <p className="sub">Register or log in to start generating events.</p>
           <div className="fields">
-            <input className="input" placeholder="Username" value={username} onChange={e=>setUsername(e.target.value)} id="login-username"/>
-            <input className="input" placeholder="Password" type="password" value={password} onChange={e=>setPassword(e.target.value)} id="login-password"/>
-            <select className="select" value={role} onChange={e=>setRole(e.target.value)} id="login-role">
+            <input className="input" placeholder="Username" value={username} onChange={e => setUsername(e.target.value)} id="login-username" />
+            <input className="input" placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} id="login-password" />
+            <select className="select" value={role} onChange={e => setRole(e.target.value)} id="login-role">
               <option value="trader">Trader</option>
               <option value="admin">Admin</option>
             </select>
@@ -148,7 +148,7 @@ function AuthPage({ onLogin }) {
             <button className="btn btn-secondary" onClick={submitRegister} id="btn-register">Register</button>
             <button className="btn btn-primary" onClick={submitLogin} id="btn-login">Login</button>
           </div>
-          {message && <p className={`msg-bar ${msgOk?'ok':'error'}`}>{message}</p>}
+          {message && <p className={`msg-bar ${msgOk ? 'ok' : 'error'}`}>{message}</p>}
         </section>
       </div>
     </div>
@@ -164,6 +164,7 @@ function Dashboard({ user, onLogout }) {
   const [dosCount, setDosCount] = useState(500);
   const [logs, setLogs] = useState([]);
   const [events, setEvents] = useState([]);
+  const [blockedIps, setBlockedIps] = useState([]);
   const endRef = useRef(null);
   const userLabel = useMemo(() => `${user.username} (${user.role})`, [user]);
 
@@ -172,6 +173,36 @@ function Dashboard({ user, onLogout }) {
   const log = useCallback((lv, txt) => {
     setLogs(p => [...p, { time: new Date(), lv, txt }]);
   }, []);
+
+  const [simRunning, setSimRunning] = useState(false);
+  const [simStats, setSimStats] = useState({ events: 0, threats: 0, blocked: 0, denied: 0 });
+  const [simFeed, setSimFeed] = useState([]);
+
+  const fetchBlocked = useCallback(async () => {
+    try {
+      const r = await fetch(`${API_BASE}/actions/blocked-ips`);
+      const data = await r.json();
+      setBlockedIps(data.blocked || []);
+    } catch (e) { /* ignore */ }
+  }, []);
+
+  const fetchSimStatus = useCallback(async () => {
+    try {
+      const r = await fetch(`${API_BASE}/actions/simulation/status`);
+      const data = await r.json();
+      setSimRunning(data.running);
+      if (data.stats) setSimStats(data.stats);
+      if (data.recentEvents) setSimFeed(data.recentEvents);
+      setBlockedIps(data.blockedIps || []);
+    } catch (e) { /* ignore */ }
+  }, []);
+
+  useEffect(() => {
+    fetchBlocked();
+    fetchSimStatus();
+    const interval = setInterval(() => { fetchBlocked(); fetchSimStatus(); }, 2000);
+    return () => clearInterval(interval);
+  }, [fetchBlocked, fetchSimStatus]);
 
   const run = useCallback(async (label, type, fn) => {
     setStatus(`Running: ${label}…`);
@@ -191,7 +222,8 @@ function Dashboard({ user, onLogout }) {
     setEvents(p => [{ id: Date.now(), time: new Date(), type, ok }, ...p]);
     setStatus(ok ? 'Action completed — events logged to Wazuh' : `Failed: ${label}`);
     setStatusOk(ok);
-  }, [log]);
+    fetchBlocked();
+  }, [log, fetchBlocked]);
 
   return (
     <div className="dash">
@@ -205,7 +237,7 @@ function Dashboard({ user, onLogout }) {
           </div>
         </div>
         <div className="dash-header-center">
-          <span className="pulse-dot" style={{ background: statusOk ? '#22c55e' : '#f43f5e' }}/>
+          <span className="pulse-dot" style={{ background: statusOk ? '#22c55e' : '#f43f5e' }} />
           {status}
         </div>
         <div className="dash-header-right">
@@ -230,18 +262,18 @@ function Dashboard({ user, onLogout }) {
         {/* Auth Panel */}
         <div className="panel">
           <div className="panel-head">
-            <div className="panel-icon" style={{background:'rgba(59,130,246,0.12)',color:'#3b82f6'}}>{I.key}</div>
+            <div className="panel-icon" style={{ background: 'rgba(59,130,246,0.12)', color: '#3b82f6' }}>{I.key}</div>
             <div><div className="panel-title">Authentication</div><div className="panel-desc">Auth event generation</div></div>
           </div>
           <div className="panel-actions">
             <button className="action-btn" id="btn-login-success"
-              onClick={()=>run('Login Success','Login Success',()=>post('/actions/login-success',{user:user.username,role:user.role}))}>
-              <span className="action-icon" style={{background:'rgba(34,197,94,0.12)',color:'#22c55e'}}>{I.check}</span>
+              onClick={() => run('Login Success', 'Login Success', () => post('/actions/login-success', { user: user.username, role: user.role }))}>
+              <span className="action-icon" style={{ background: 'rgba(34,197,94,0.12)', color: '#22c55e' }}>{I.check}</span>
               Login Success
             </button>
             <button className="action-btn" id="btn-login-fail"
-              onClick={()=>run('Login Fail','Login Fail',()=>post('/actions/login-fail',{user:user.username,role:user.role}))}>
-              <span className="action-icon" style={{background:'rgba(244,63,94,0.12)',color:'#f43f5e'}}>{I.x}</span>
+              onClick={() => run('Login Fail', 'Login Fail', () => post('/actions/login-fail', { user: user.username, role: user.role }))}>
+              <span className="action-icon" style={{ background: 'rgba(244,63,94,0.12)', color: '#f43f5e' }}>{I.x}</span>
               Login Fail
             </button>
           </div>
@@ -250,28 +282,29 @@ function Dashboard({ user, onLogout }) {
         {/* Trading Panel */}
         <div className="panel">
           <div className="panel-head">
-            <div className="panel-icon" style={{background:'rgba(245,158,11,0.12)',color:'#f59e0b'}}>{I.activity}</div>
+            <div className="panel-icon" style={{ background: 'rgba(245,158,11,0.12)', color: '#f59e0b' }}>{I.activity}</div>
             <div><div className="panel-title">Trading</div><div className="panel-desc">Platform changes</div></div>
           </div>
           <div className="panel-actions">
             <button className="action-btn" id="btn-modify-algo"
-              onClick={()=>run('Modify Algorithm','Algo Modify',()=>post('/actions/modify-algo',{user:user.username,role:user.role,time:'trading_hours'}))}>
-              <span className="action-icon" style={{background:'rgba(245,158,11,0.12)',color:'#f59e0b'}}>{I.code}</span>
+              onClick={() => run('Modify Algorithm', 'Algo Modify', () => post('/actions/modify-algo', { user: user.username, role: user.role, time: 'trading_hours' }))}>
+              <span className="action-icon" style={{ background: 'rgba(245,158,11,0.12)', color: '#f59e0b' }}>{I.code}</span>
               Modify Algorithm
             </button>
           </div>
         </div>
 
+
         {/* MISP Threat Intel Panel */}
         <div className="panel">
           <div className="panel-head">
-            <div className="panel-icon" style={{background:'rgba(167,139,250,0.12)',color:'#a78bfa'}}>{I.shield}</div>
+            <div className="panel-icon" style={{ background: 'rgba(167,139,250,0.12)', color: '#a78bfa' }}>{I.shield}</div>
             <div><div className="panel-title">Threat Intel</div><div className="panel-desc">MISP IoC simulation</div></div>
           </div>
           <div className="panel-actions">
             <button className="action-btn" id="btn-misp-threat"
-              onClick={()=>run('MISP Threat Simulation','MISP Threat',()=>post('/actions/simulate-misp-threat',{user:user.username}))}>
-              <span className="action-icon" style={{background:'rgba(167,139,250,0.12)',color:'#a78bfa'}}>{I.zap}</span>
+              onClick={() => run('MISP Threat Simulation', 'MISP Threat', () => post('/actions/simulate-misp-threat', { user: user.username }))}>
+              <span className="action-icon" style={{ background: 'rgba(167,139,250,0.12)', color: '#a78bfa' }}>{I.zap}</span>
               Trigger MISP IPs
             </button>
           </div>
@@ -280,28 +313,29 @@ function Dashboard({ user, onLogout }) {
         {/* Attack Panel */}
         <div className="panel">
           <div className="panel-head">
-            <div className="panel-icon" style={{background:'rgba(244,63,94,0.12)',color:'#f43f5e'}}>{I.zap}</div>
+            <div className="panel-icon" style={{ background: 'rgba(244,63,94,0.12)', color: '#f43f5e' }}>{I.zap}</div>
             <div><div className="panel-title">Attack Simulation</div><div className="panel-desc">Repeatable patterns</div></div>
           </div>
           <div className="panel-actions">
             <button className="action-btn" id="btn-brute-force"
-              onClick={()=>run('SSH Brute Force','Brute Force',async()=>{
-                for(let i=0;i<15;i++) await post('/actions/login-fail',{user:user.username,role:user.role});
-                return {message:'15 brute-force login failures logged'};
+              onClick={() => run('SSH Brute Force', 'Brute Force', async () => {
+                for (let i = 0; i < 15; i++) await post('/actions/login-fail', { user: user.username, role: user.role });
+                return { message: '15 brute-force login failures logged' };
               })}>
-              <span className="action-icon" style={{background:'rgba(244,63,94,0.12)',color:'#f43f5e'}}>{I.key}</span>
+              <span className="action-icon" style={{ background: 'rgba(244,63,94,0.12)', color: '#f43f5e' }}>{I.key}</span>
               SSH Brute Force
             </button>
             <div className="dos-row">
-              <input className="dos-input" type="number" value={dosCount} onChange={e=>setDosCount(e.target.value)} min="1" id="input-dos-count"/>
-              <button className="action-btn" style={{flex:1}} id="btn-dos"
-                onClick={()=>run('HTTP Flood','DoS Flood',()=>post('/actions/simulate-dos',{count:Number(dosCount)}))}>
-                <span className="action-icon" style={{background:'rgba(20,184,166,0.12)',color:'#14b8a6'}}>{I.wifi}</span>
+              <input className="dos-input" type="number" value={dosCount} onChange={e => setDosCount(e.target.value)} min="1" id="input-dos-count" />
+              <button className="action-btn" style={{ flex: 1 }} id="btn-dos"
+                onClick={() => run('HTTP Flood', 'DoS Flood', () => post('/actions/simulate-dos', { count: Number(dosCount) }))}>
+                <span className="action-icon" style={{ background: 'rgba(20,184,166,0.12)', color: '#14b8a6' }}>{I.wifi}</span>
                 HTTP Flood
               </button>
             </div>
           </div>
         </div>
+
       </aside>
 
       {/* ── MAIN: console + event log ── */}
@@ -310,7 +344,7 @@ function Dashboard({ user, onLogout }) {
         <div className="console">
           <div className="console-bar">
             <div className="console-bar-left">
-              <div className="traffic-lights"><span className="tl tl-r"/><span className="tl tl-y"/><span className="tl tl-g"/></div>
+              <div className="traffic-lights"><span className="tl tl-r" /><span className="tl tl-y" /><span className="tl tl-g" /></div>
               <div className="console-label">
                 ▸ Event Console
                 <span className="console-badge" style={{
@@ -320,21 +354,21 @@ function Dashboard({ user, onLogout }) {
               </div>
             </div>
             <div className="console-bar-right">
-              <button className="console-btn" onClick={()=>setLogs([])} id="btn-clear-log">Clear</button>
+              <button className="console-btn" onClick={() => setLogs([])} id="btn-clear-log">Clear</button>
             </div>
           </div>
           <div className="console-body">
             {logs.length === 0
               ? <div className="console-empty">Waiting for events…</div>
-              : logs.map((l,i)=>(
-                  <div className="log-line" key={i}>
-                    <span className="ts">{ts(l.time)}</span>
-                    <span className={`lv ${l.lv}`}>{l.lv==='ok'?'DONE':l.lv.toUpperCase()}</span>
-                    <span className="txt">{l.txt}</span>
-                  </div>
-                ))
+              : logs.map((l, i) => (
+                <div className="log-line" key={i}>
+                  <span className="ts">{ts(l.time)}</span>
+                  <span className={`lv ${l.lv}`}>{l.lv === 'ok' ? 'DONE' : l.lv.toUpperCase()}</span>
+                  <span className="txt">{l.txt}</span>
+                </div>
+              ))
             }
-            <div ref={endRef}/>
+            <div ref={endRef} />
           </div>
         </div>
 
@@ -346,30 +380,119 @@ function Dashboard({ user, onLogout }) {
               <span>Event Log</span>
               <span className="event-count">{events.length}</span>
             </div>
-            <button className="console-btn" onClick={()=>setEvents([])} id="btn-clear-events">Reset</button>
+            <button className="console-btn" onClick={() => setEvents([])} id="btn-clear-events">Reset</button>
           </div>
           {events.length === 0
-            ? <div className="event-empty">{I.inbox}<p style={{marginTop:'0.3rem'}}>No events yet. Use the panels to generate activity.</p></div>
+            ? <div className="event-empty">{I.inbox}<p style={{ marginTop: '0.3rem' }}>No events yet. Use the panels to generate activity.</p></div>
             : <div className="event-table-wrap">
-                <table className="event-table">
-                  <thead><tr><th>Time</th><th>Event Type</th><th>Status</th></tr></thead>
-                  <tbody>
-                    {events.map(e=>(
-                      <tr key={e.id}>
-                        <td className="mono">{ts(e.time)}</td>
-                        <td><span className={`tag ${
-                          e.type.includes('Brute')?'fail':e.type.includes('DoS')?'purple':e.type.includes('Algo')?'warn':e.type.includes('Success')?'ok':'info'
+              <table className="event-table">
+                <thead><tr><th>Time</th><th>Event Type</th><th>Status</th></tr></thead>
+                <tbody>
+                  {events.map(e => (
+                    <tr key={e.id}>
+                      <td className="mono">{ts(e.time)}</td>
+                      <td><span className={`tag ${e.type.includes('Brute') ? 'fail' : e.type.includes('DoS') ? 'purple' : e.type.includes('Algo') ? 'warn' : e.type.includes('Success') ? 'ok' : 'info'
                         }`}>{e.type}</span></td>
-                        <td><span className={`tag ${e.ok?'ok':'fail'}`}>{e.ok?'✓ Logged':'✗ Failed'}</span></td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
+                      <td><span className={`tag ${e.ok ? 'ok' : 'fail'}`}>{e.ok ? '✓ Logged' : '✗ Failed'}</span></td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           }
         </div>
       </main>
+
+      {/* ── RIGHT PANEL: Live Simulation + SOAR ── */}
+      <aside className="right-panel">
+
+        {/* Live Simulation */}
+        <div className="panel">
+          <div className="panel-head">
+            <div className="panel-icon" style={{ background: 'rgba(20,184,166,0.12)', color: '#14b8a6' }}>{I.activity}</div>
+            <div>
+              <div className="panel-title">Live Simulation</div>
+              <div className="panel-desc">MISP-driven threat engine</div>
+            </div>
+          </div>
+          <div className="panel-actions">
+            <button
+              className="action-btn"
+              id="btn-sim-toggle"
+              onClick={() => run(
+                simRunning ? 'Stop Simulation' : 'Start Simulation',
+                simRunning ? 'Sim Stop' : 'Sim Start',
+                () => post(`/actions/simulation/${simRunning ? 'stop' : 'start'}`, {})
+              )}
+              style={{ background: simRunning ? 'rgba(244,63,94,0.08)' : 'rgba(20,184,166,0.08)', borderColor: simRunning ? 'rgba(244,63,94,0.3)' : 'rgba(20,184,166,0.3)' }}
+            >
+              <span className="action-icon" style={{ background: simRunning ? 'rgba(244,63,94,0.12)' : 'rgba(20,184,166,0.12)', color: simRunning ? '#f43f5e' : '#14b8a6' }}>
+                {simRunning ? I.x : I.zap}
+              </span>
+              {simRunning ? '⏸ Pause Simulation' : '▶ Start Simulation'}
+            </button>
+            <div className="sim-stats-grid">
+              {[['Events', simStats.events, '#64748b'], ['Threats', simStats.threats, '#f59e0b'], ['Blocked', simStats.blocked, '#ef4444'], ['Denied', simStats.denied, '#a78bfa']].map(([l, v, c]) => (
+                <div className="sim-stat" key={l}>
+                  <div className="sim-stat-val" style={{ color: c }}>{v}</div>
+                  <div className="sim-stat-label">{l}</div>
+                </div>
+              ))}
+            </div>
+            {simFeed.length > 0 && (
+              <div className="sim-feed">
+                {simFeed.slice(0, 10).map((e, i) => (
+                  <div className="sim-feed-row" key={i}>
+                    <span className="sim-feed-dot" style={{ color: e.type === 'auto_blocked' ? '#ef4444' : e.type === 'threat_detected' ? '#f59e0b' : e.type === 'denied' ? '#a78bfa' : '#334155' }}>●</span>
+                    <span className="sim-feed-ip">{e.ip}</span>
+                    {e.tag && <span className="sim-feed-tag">[{e.tag}]</span>}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* SOAR Response */}
+        <div className="panel">
+          <div className="panel-head">
+            <div className="panel-icon" style={{ background: 'rgba(239,68,68,0.12)', color: '#ef4444' }}>{I.shield}</div>
+            <div>
+              <div className="panel-title">SOAR Response</div>
+              <div className="panel-desc">{blockedIps.length} IPs blocked</div>
+            </div>
+          </div>
+          <div className="panel-actions">
+            {blockedIps.length > 0 ? (
+              <>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', marginBottom: '6px' }}>
+                  {blockedIps.map(ip => (
+                    <div className="blocked-chip" key={ip}>
+                      <span className="blocked-chip-dot">●</span>{ip}
+                    </div>
+                  ))}
+                </div>
+                <button className="action-btn" id="btn-unblock-all"
+                  onClick={() => run('Unblock All IPs', 'Recovery', async () => {
+                    const r = await post('/actions/unblock-all', {});
+                    return r;
+                  })}>
+                  <span className="action-icon" style={{ background: 'rgba(34,197,94,0.12)', color: '#22c55e' }}>{I.refresh}</span>
+                  Unblock All (Recovery)
+                </button>
+              </>
+            ) : (
+              <div style={{ textAlign: 'center', padding: '16px 8px', color: '#334155', fontSize: '0.72rem' }}>
+                <div style={{ fontSize: '1.5rem', marginBottom: '4px' }}>🛡️</div>
+                No IPs blocked — system clean
+              </div>
+            )}
+          </div>
+        </div>
+
+      </aside>
     </div>
+
   );
 }
 
