@@ -1,4 +1,4 @@
-# HFT SOC Lab — Automated Security Operations Centre
+# AegisSOC — Automated Security Operations Centre
 
 > A production-grade, MISP-driven Security Operations Centre (SOC) pipeline simulating a High-Frequency Trading (HFT) firm's security infrastructure. Integrates real-time threat intelligence, automated incident response, and live SIEM alerting using industry-standard open-source tools.
 
