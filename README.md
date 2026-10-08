@@ -1,6 +1,8 @@
-# AegisSOC — Automated Security Operations Centre
+# AegisSOC — End-to-End Automated SOC for Financial Trading Infrastructure
 
-> A production-grade, MISP-driven Security Operations Centre (SOC) pipeline simulating a High-Frequency Trading (HFT) firm's security infrastructure. Integrates real-time threat intelligence, automated incident response, and live SIEM alerting using industry-standard open-source tools.
+> A portfolio-grade Security Operations Centre (SOC) platform that models how a high-frequency trading (HFT) firm can detect, investigate, and respond to threats in real time. AegisSOC connects threat intelligence, SIEM detection, SOAR automation, and a live analyst dashboard into one end-to-end security workflow.
+
+Built to demonstrate practical security engineering rather than an isolated proof of concept, the project turns MISP indicators into actionable Wazuh alerts and automated Shuffle responses while giving an analyst a real-time view of the environment.
 
 ---
 
@@ -16,7 +18,48 @@ This project demonstrates a complete, end-to-end automated threat detection and 
 
 ---
 
+## Achievements / Impact
+
+- Built an end-to-end SOC workflow spanning threat intelligence, log collection, detection engineering, automated response, and analyst visualisation.
+- Integrated **MISP, Wazuh, Shuffle, Node.js, React, VirtualBox, Docker, and ngrok** across a Windows host and Ubuntu VM.
+- Implemented **10 custom Wazuh rules** and **2 custom decoders** for authentication, network, CEF, IOC, and SOAR events.
+- Modelled **4 attack campaigns** containing **12 unique malicious IPs**, including cross-event correlation that exposes reused attacker infrastructure.
+- Automated first-response containment by blocking malicious IPs and persisting the blocklist across backend restarts.
+- Created a repeatable simulation environment for demonstrating SSH brute force, HTTP flood, IOC detection, C2/ransomware activity, and repeated blocked-IP attempts.
+
+---
+
+## Role and responsibilities
+
+This project covered the full security engineering lifecycle:
+
+- **Security architecture:** Designed the Windows-host and Ubuntu-VM topology and defined the flow from MISP intelligence through Wazuh and Shuffle to the dashboard.
+- **Threat intelligence engineering:** Created campaign-based MISP events, synchronised indicators, and used correlation data to represent attacker infrastructure reuse.
+- **Detection engineering:** Developed and tuned Wazuh rules and decoders for authentication failures, brute force, algorithm modification, network floods, MISP IOC matches, and SOAR actions.
+- **Backend development:** Built the Node.js/Express service for MISP synchronisation, traffic simulation, CEF logging, API actions, ngrok exposure, and persistent blocklist management.
+- **Automation and response:** Connected Shuffle webhooks to the backend so detected malicious IPs could be blocked automatically and safely reset for repeatable demonstrations.
+- **Frontend development:** Designed the React dashboard to surface live events, threat intelligence, simulation controls, alert context, blocked IPs, and recovery actions.
+- **Validation and documentation:** Added operational commands, log examples, deployment scripts, and a playbook for setup, troubleshooting, and live demonstrations.
+
+---
+
+## Project outcome
+
+AegisSOC delivers a working, repeatable SOC demonstration in which a malicious event can move through the complete response chain:
+
+**MISP indicator → simulated traffic → CEF/network log → Wazuh alert → Shuffle webhook → IP block → dashboard visibility**
+
+The result is an isolated environment that makes security operations observable and testable. It demonstrates how threat intelligence can be operationalised into detection and containment, while also providing a practical foundation for extending the project with additional data sources, detections, playbooks, and analyst workflows.
+
+---
+
 ## Architecture
+
+The platform is split across two environments so that the security infrastructure and the application being monitored remain clearly separated:
+
+- **Ubuntu VM:** Hosts the security operations infrastructure in Docker: MISP for threat intelligence, Wazuh for SIEM detection, and Shuffle for SOAR orchestration.
+- **Windows host:** Runs the application under test: the Node.js backend, React dashboard, Wazuh agent, and ngrok tunnel.
+- **Virtual network:** The VM uses `192.168.56.105` to communicate with the Windows host. The Wazuh agent ships host logs to the Wazuh manager, while ngrok provides a controlled route for Shuffle to call the backend response API.
 
 ```
 ┌──────────────────────────────────────────────────────────────┐
@@ -36,6 +79,44 @@ This project demonstrates a complete, end-to-end automated threat detection and 
 │  ngrok          ── exposes /api/actions/block-ip to VM       │
 └──────────────────────────────────────────────────────────────┘
 ```
+
+### Diagram walkthrough
+
+1. **MISP — threat intelligence source (`:8081`)**
+   MISP stores the malicious IP indicators used by the project. The backend periodically synchronises these indicators, and the Wazuh deployment script can use the same intelligence to keep detection rules aligned with current MISP data.
+
+2. **Node.js backend (`:5000`) — application and simulation layer**
+   The backend runs on the Windows host. It retrieves MISP indicators, generates normal and malicious HFT-style traffic, writes authentication/network/CEF logs, exposes dashboard APIs, and maintains the persistent IP blocklist. It is the source of the events that exercise the rest of the pipeline.
+
+3. **Wazuh Agent — log collection layer**
+   The Windows Wazuh agent monitors `auth.log`, `network.log`, and `app.log`. It forwards those records to the Wazuh manager in the Ubuntu VM, allowing simulated activity to be processed like security telemetry from a real host.
+
+4. **Wazuh Manager (`:443`) — detection and alerting layer**
+   Wazuh decoders parse the project’s SSH, network, and CEF formats. The custom rules then identify events such as login failures, brute force, HTTP floods, MISP IOC matches, critical C2/ransomware indicators, and repeated connection attempts from blocked IPs.
+
+5. **Shuffle (`:3001`) — orchestration and response layer**
+   When Wazuh identifies a new malicious IP, the alert can trigger a Shuffle workflow. Shuffle sends a block request through the ngrok tunnel to the backend, which adds the IP to the persistent blocklist and records the response.
+
+6. **ngrok — controlled webhook bridge**
+   The tunnel exposes only the backend’s block-IP endpoint to the VM-hosted Shuffle workflow. This allows the isolated lab components to communicate without requiring the backend to be directly exposed on the local network.
+
+7. **React dashboard (`:5173`) — analyst experience**
+   The dashboard presents the live event console, threat intelligence, simulation controls, Wazuh-related activity, blocked IPs, and recovery actions in one interface. It provides the visual layer for observing the detection and response cycle.
+
+### End-to-end data flow
+
+The normal security workflow is:
+
+1. MISP publishes or stores an indicator.
+2. The backend synchronises the indicator and uses it in the traffic simulation.
+3. Simulated activity is written as authentication, network, or CEF application logs.
+4. The Wazuh Agent forwards those logs to the Wazuh Manager.
+5. Wazuh decoders and custom rules classify the activity and generate an alert.
+6. Shuffle receives the relevant alert and runs the response workflow.
+7. Shuffle calls the backend through ngrok to block the malicious IP.
+8. The backend persists the block, logs the action, and exposes the result to the React dashboard.
+
+This separation mirrors a practical SOC design: **MISP supplies context, Wazuh detects, Shuffle orchestrates, the backend enforces the response, and the dashboard gives the analyst visibility and control.**
 
 ---
 
@@ -272,3 +353,19 @@ docker exec single-node_wazuh.manager_1 /var/ossec/bin/agent_control -l
 - [Wazuh Documentation](https://documentation.wazuh.com/)
 - [Shuffle SOAR](https://shuffler.io/)
 - [Common Event Format (CEF)](https://www.microfocus.com/documentation/arcsight/arcsight-smartconnectors-8.4/cef-implementation-standard/)
+
+---
+
+## For recruiters and reviewers
+
+**AegisSOC demonstrates:** security monitoring, threat intelligence, detection engineering, incident-response automation, backend and frontend integration, Linux/Windows interoperability, and technical documentation.
+
+The project is especially relevant to roles in:
+
+- Security Operations and SOC Engineering
+- Threat Detection and Incident Response
+- Cybersecurity Automation and SOAR
+- Security Engineering and Platform Engineering
+- Full-stack engineering for security products
+
+For a technical walkthrough, start with the [architecture](#architecture), [features](#features), and [setup instructions](#setup--running). For the complete live-demo sequence and troubleshooting notes, see [`playbook.md`](playbook.md).
