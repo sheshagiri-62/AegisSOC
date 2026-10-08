@@ -356,7 +356,7 @@ docker exec single-node_wazuh.manager_1 /var/ossec/bin/agent_control -l
 
 ---
 
-## For recruiters and reviewers
+## For Reviewers
 
 **AegisSOC demonstrates:** security monitoring, threat intelligence, detection engineering, incident-response automation, backend and frontend integration, Linux/Windows interoperability, and technical documentation.
 
